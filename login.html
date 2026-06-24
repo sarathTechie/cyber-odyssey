@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Odyssey - Login</title>
+    <link rel="stylesheet" href="round1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .login-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .login-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: 0 0 30px rgba(123, 44, 191, 0.15);
+        }
+
+        .login-field {
+            margin-bottom: 1.5rem;
+        }
+
+        .login-field label {
+            display: block;
+            color: var(--highlight);
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-field input {
+            width: 100%;
+            background: rgba(10, 10, 15, 0.8);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
+            padding: 0.8rem 1rem;
+            outline: none;
+            box-sizing: border-box;
+            transition: all 0.3s;
+        }
+
+        .login-field input:focus {
+            border-color: var(--highlight);
+            box-shadow: 0 0 10px rgba(123, 44, 191, 0.3);
+        }
+
+        .login-error {
+            color: var(--error);
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .login-error.visible {
+            display: block;
+            animation: glitchText 0.3s ease;
+        }
+
+        @keyframes glitchText {
+            0% {
+                transform: translateX(-2px);
+            }
+
+            25% {
+                transform: translateX(2px);
+            }
+
+            50% {
+                transform: translateX(-1px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .login-container {
+                width: 100%;
+                padding: 0;
+            }
+
+            .login-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .login-field input {
+                font-size: 0.9rem;
+                padding: 0.7rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="crt-overlay"></div>
+    <div class="scanline"></div>
+
+    <header class="persistent-header">
+        <h1 class="glitch" data-text="Cyber Odyssey">Cyber Odyssey</h1>
+        <h2>[ SYSTEM.ACCESS: AUTHENTICATION_REQUIRED ]</h2>
+    </header>
+
+    <main class="game-container">
+        <div class="login-container">
+            <div class="screen active" style="display: block;">
+                <h2 class="neon-text" style="text-align: center; margin-bottom: 1.5rem;">Register / Authenticate</h2>
+                <div class="login-card">
+                    <div class="terminal-box" style="margin-bottom: 2rem;">
+                        <p class="typewriter">> SECURITY PROTOCOL ACTIVE</p>
+                        <p class="typewriter delay-1">> ENTER TEAM CREDENTIALS TO PROCEED</p>
+                    </div>
+
+                    <form id="login-form">
+                        <div class="login-field">
+                            <label>> PARTICIPANT_NAME:</label>
+                            <input type="text" id="participant-name" placeholder="Enter your full name..."
+                                autocomplete="off" required>
+                        </div>
+                        <div class="login-field">
+                            <label>> TEAM_NAME:</label>
+                            <input type="text" id="team-name" placeholder="Enter team name..." autocomplete="off"
+                                required>
+                        </div>
+                        <div class="login-field">
+                            <label>> REGISTRATION_NUMBER:</label>
+                            <input type="text" id="reg-number" placeholder="Enter registration number..."
+                                autocomplete="off" required>
+                        </div>
+                        <button type="submit" class="cyber-btn" style="width: 100%;">
+                            <span class="btn-text">REGISTER / AUTHENTICATE</span>
+                        </button>
+                    </form>
+
+                    <div id="login-error" class="login-error">
+                        > ACCESS_DENIED: Invalid credentials.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

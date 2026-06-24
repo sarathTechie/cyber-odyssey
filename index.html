@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Odyssey</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+
+            /* Fix team info overlapping the title on mobile */
+            .top-header {
+                position: relative;
+                padding-bottom: 2rem;
+            }
+
+            .team-info-box {
+                position: absolute !important;
+                right: 0 !important;
+                top: auto !important;
+                bottom: 0 !important;
+                font-size: 0.7rem !important;
+                max-width: 60%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            /* Title smaller */
+            .header-title {
+                font-size: 1.6rem;
+            }
+
+            /* Hero: stack image below text */
+            .hero-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .neon-title-box h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-desc {
+                font-size: 0.95rem;
+            }
+
+            .hero-image-wrapper {
+                justify-content: center;
+            }
+
+            /* Rounds: 2 columns instead of 5 */
+            .rounds-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .round-card {
+                min-height: 180px;
+                padding: 1rem 0.8rem;
+            }
+
+            .round-card h4 {
+                font-size: 0.85rem;
+            }
+
+            /* Start button full width */
+            .start-quiz-btn {
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+
+<body style="user-select: none;">
+    <div class="circuit-bg"></div>
+
+    <div class="container">
+        <!-- Top Header -->
+        <header class="top-header"
+            style="justify-content: center; text-align: center; border-bottom: none; margin-bottom: 2rem; position: relative;">
+            <div class="header-details" style="width: 100%; display: flex; justify-content: center;">
+                <h1 class="header-title" style="text-align: center;">CYBER ODYSSEY</h1>
+            </div>
+            <div id="team-info"
+                style="position: absolute; right: 0; top: 10px; text-align: right; font-family: 'Fira Code', monospace; color: #9d4edd; font-size: 0.85rem;"
+                class="team-info-box"></div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="neon-title-box">
+                    <h2>CYBER SURVIVAL<br>CHALLENGE</h2>
+                </div>
+
+                <h3 class="hero-subtitle">5 ROUNDS. 1 ULTIMATE SURVIVOR.</h3>
+
+                <p class="hero-desc">
+                    Test your cyber awareness, logic, and problem-solving skills in our intense Cyber Odyssey. Only the
+                    fastest and smartest will survive the challenge!
+                </p>
+
+
+            </div>
+
+            <div class="hero-image-wrapper">
+                <img src="hero_hacker.png" alt="Cyber Hacker" class="hero-image">
+            </div>
+        </section>
+
+        <!-- Rounds Section -->
+        <section class="rounds-section">
+            <h3 class="section-title">ROUNDS AT A GLANCE</h3>
+
+            <div class="rounds-grid" style="cursor: default;">
+                <!-- Round 1 -->
+                <div class="round-card">
+                    <h4>ROUND 1:<br>RED LIGHT,<br>GREEN LIGHT</h4>
+                    <div class="round-icons">
+                        <!-- Simple SVG representation for icons -->
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <p>Phishing detection</p>
+                </div>
+
+                <!-- Round 2 -->
+                <div class="round-card">
+                    <h4>ROUND 2:<br>GLASS BRIDGE</h4>
+                    <div class="round-icons">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <p>MCQ scenarios</p>
+                </div>
+
+                <!-- Round 3 -->
+                <div class="round-card">
+                    <h4>ROUND 3:<br>TUG OF WAR</h4>
+                    <div class="round-icons">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p>Matching threats/solutions</p>
+                </div>
+
+                <!-- Round 4 -->
+                <div class="round-card">
+                    <h4>ROUND 4:<br>DALGONA<br>CHALLENGE</h4>
+                    <div class="round-icons">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="3" x2="9" y2="21"></line>
+                        </svg>
+                    </div>
+                    <p>Ciphers/Riddles</p>
+                </div>
+
+                <!-- Round 5 -->
+                <div class="round-card">
+                    <h4>ROUND 5:<br>FINAL CYBER<br>SURVIVAL</h4>
+                    <div class="round-icons">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                    </div>
+                    <p>Rapid-fire questions</p>
+                </div>
+            </div>
+
+            <div id="action-btn-container" style="text-align: center; margin-top: 4rem;">
+                <a href="round1.html" class="start-quiz-btn">START QUIZ TEST</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- User Modal Overlay -->
+    <div id="user-overlay"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 5, 28, 0.85); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(5px);">
+        <div class="terminal-box"
+            style="background: var(--bg-dark); border: 2px solid var(--primary); padding: 3rem; border-radius: 8px; width: 400px; max-width: 90%; text-align: center; position: relative;">
+            <button onclick="closeUserModal()"
+                style="position: absolute; top: 10px; right: 15px; background: none; border: none; color: var(--text-muted); font-size: 2rem; cursor: pointer; font-family: monospace;">&times;</button>
+            <h2 class="neon-text" style="font-size: 1.5rem; margin-bottom: 2rem;">USER_PROFILE</h2>
+
+            <div
+                style="text-align: left; margin-bottom: 2rem; font-family: 'Fira Code', monospace; color: var(--text-main); font-size: 1rem; line-height: 1.8;">
+                <p><strong style="color: var(--accent);">> NAME:</strong> <span id="modal-user-name"></span></p>
+                <p><strong style="color: var(--accent);">> TEAM:</strong> <span id="modal-team-name"></span></p>
+                <p><strong style="color: var(--accent);">> REG_NO:</strong> <span id="modal-reg-no"></span></p>
+            </div>
+
+            <button onclick="logoutUser()" class="btn btn-primary"
+                style="width: 100%; border: 1px solid var(--error); background: rgba(255, 0, 0, 0.1); color: #ff4d4d; box-shadow: none; font-family: 'Fira Code', monospace; font-size: 1rem;">>
+                INITIATE_LOGOUT</button>
+        </div>
+    </div>
+    <script src="anti-cheat.js"></script>
+</body>
+<script>
+    (async function checkSession() {
+        try {
+            const res = await fetch('/api/session');
+            const data = await res.json();
+            if (!data.authenticated) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            const teamInfoEl = document.getElementById('team-info');
+            if (teamInfoEl) {
+                const safeName = (data.name || '').replace(/'/g, "\\'");
+                const safeTeam = (data.team_name || '').replace(/'/g, "\\'");
+                const safeReg = (data.registration_number || '').replace(/'/g, "\\'");
+                teamInfoEl.innerHTML = `<span style="cursor: pointer; text-decoration: underline; text-decoration-color: rgba(157, 78, 221, 0.5); text-underline-offset: 4px; padding: 5px;" onclick="openUserModal('${safeName}', '${safeTeam}', '${safeReg}')">> LOGGED IN AS: ${data.team_name}${data.is_admin ? ' [ADMIN]' : ''}</span>`;
+            }
+
+            // Check if all rounds are completed
+            const s = data.scores;
+            if (s && s.round_1 !== null && s.round_2 !== null && s.round_3 !== null && s.round_4 !== null && s.round_5 !== null) {
+                const total = s.round_1 + s.round_2 + s.round_3 + s.round_4 + s.round_5;
+                const btnContainer = document.getElementById('action-btn-container');
+                if (btnContainer) {
+                    btnContainer.innerHTML = `<button onclick="showFinalResults(${total})" class="start-quiz-btn" style="background: var(--brand-primary); cursor: pointer; border: none; font-family: inherit;">SHOW RESULTS</button>`;
+                }
+            }
+        } catch (e) {
+            // If server is not running, allow static browsing
+            console.warn('Server not reachable, running in static mode.');
+        }
+    })();
+
+    function showFinalResults(totalScore) {
+        const roundsGrid = document.querySelector('.rounds-grid');
+        if (roundsGrid) {
+            roundsGrid.innerHTML = `
+            <div class="terminal-box" style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; border-color: var(--success); background: rgba(0, 200, 83, 0.05);">
+                <h2 class="neon-text" style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--success);">> SYSTEM_OVERRIDE_COMPLETE</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-main);">> ALL PROTOCOLS EXECUTED. FINAL SCORE COMPUTED.</p>
+                <div style="font-size: 5rem; color: var(--success); font-weight: bold; text-shadow: 0 0 30px rgba(0, 200, 83, 0.5); font-family: 'Fira Code', monospace;">
+                    ${totalScore} <span style="font-size: 2.5rem; color: var(--text-secondary); text-shadow: none;">/ 74</span>
+                </div>
+                <p style="font-size: 1rem; color: var(--text-secondary); margin-top: 1rem;">TOTAL POINTS ACQUIRED</p>
+            </div>
+        `;
+        }
+        const btnContainer = document.getElementById('action-btn-container');
+        if (btnContainer) btnContainer.style.display = 'none';
+    }
+
+    // User Modal Functions
+    function openUserModal(name, team, reg) {
+        document.getElementById('modal-user-name').textContent = name || 'N/A';
+        document.getElementById('modal-team-name').textContent = team || 'N/A';
+        document.getElementById('modal-reg-no').textContent = reg || 'N/A';
+        document.getElementById('user-overlay').style.display = 'flex';
+    }
+
+    function closeUserModal() {
+        document.getElementById('user-overlay').style.display = 'none';
+    }
+
+    // Close modal if clicking outside the box
+    document.getElementById('user-overlay').addEventListener('click', function (e) {
+        if (e.target === this) closeUserModal();
+    });
+
+    async function logoutUser() {
+        try {
+            await fetch('/api/logout', { method: 'POST' });
+            window.location.href = 'login.html';
+        } catch (e) {
+            console.error(e);
+            window.location.href = 'login.html';
+        }
+    }
+</script>
+
+</html>

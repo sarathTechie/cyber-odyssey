@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Odyssey - Round 5</title>
+    <link rel="stylesheet" href="round1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .input-group {
+            margin-top: 1.5rem;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            background: rgba(10, 10, 15, 0.8);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            margin-top: 0.5rem;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .input-wrapper:focus-within {
+            border-color: var(--highlight);
+            box-shadow: 0 0 10px rgba(123, 44, 191, 0.3);
+        }
+
+        .prompt-arrow {
+            color: var(--highlight);
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+
+        #answer-input {
+            background: transparent;
+            border: none;
+            color: var(--text-main);
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
+            width: 100%;
+            outline: none;
+        }
+
+        @media (max-width: 600px) {
+            #answer-input {
+                font-size: 0.9rem;
+            }
+
+            #end-screen>div,
+            #blocked-screen>div {
+                flex-direction: column !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="user-select: none;">
+    <div class="crt-overlay"></div>
+    <div class="scanline"></div>
+
+    <header class="persistent-header">
+        <h1 class="glitch" data-text="Cyber Odyssey">Cyber Odyssey</h1>
+        <h2>[ SYSTEM.ACCESS: ROUND 5_RAPID_FIRE ]</h2>
+    </header>
+
+    <main class="game-container">
+        <div id="start-screen" class="screen active">
+            <h2 class="neon-text">Rapid Fire</h2>
+            <div class="terminal-box">
+                <p class="typewriter">> INITIALIZING SIMULATION...</p>
+                <p class="typewriter delay-1">> TARGET: Direct Knowledge Assessment</p>
+                <p class="typewriter delay-2">> MISSION: Answer the questions accurately.</p>
+                <p class="typewriter delay-3">> INPUT REQUIRED: Type your answer into the terminal.</p>
+                <p class="typewriter delay-4">> AWAITING USER CONFIRMATION_</p>
+            </div>
+            <button id="start-btn" class="cyber-btn">
+                <span class="btn-text">INITIALIZE_ROUND_5</span>
+                <span class="btn-glitch"></span>
+            </button>
+        </div>
+
+        <div id="question-screen" class="screen">
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+            <div class="card cyber-card">
+                <h3 id="q-number" class="neon-text">Question 1</h3>
+                <div class="scenario-details terminal-box">
+                    <p><strong>> QUERY:</strong> <span id="q-scenario"></span></p>
+                </div>
+
+                <div class="input-group">
+                    <label for="answer-input">> PROVIDE_ANSWER:</label>
+                    <div class="input-wrapper">
+                        <span class="prompt-arrow">></span>
+                        <input type="text" id="answer-input" placeholder="Type your answer here..." autocomplete="off">
+                    </div>
+                </div>
+
+                <button id="submit-btn" class="cyber-btn" style="margin-top: 1.5rem;">
+                    <span class="btn-text">EXECUTE_ANALYSIS</span>
+                </button>
+                <div id="feedback-message" class="hidden"></div>
+                <div id="developer-note" class="hidden"
+                    style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem; border-top: 1px dashed var(--border-color); padding-top: 1rem;">
+                </div>
+            </div>
+        </div>
+
+        <div id="end-screen" class="screen">
+            <h2 class="neon-text">SIMULATION_COMPLETE</h2>
+            <div class="terminal-box">
+                <p>> PROCESSING RESULTS...</p>
+                <p>> FINAL SCORE: <span id="final-score" class="neon-text score-text">0</span> / 4</p>
+                <p id="evaluation-text"></p>
+            </div>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                <a href="index.html" class="cyber-btn"
+                    style="margin-top: 0; text-decoration: none; display: flex; align-items: center; justify-content: center;">
+                    <span class="btn-text">RETURN_TO_MAIN</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="blocked-screen" class="screen">
+            <h2 class="neon-text">ACCESS_DENIED</h2>
+            <div class="terminal-box">
+                <p>> ROUND 5 ALREADY COMPLETED.</p>
+                <p>> YOUR SCORE: <span id="blocked-score" class="neon-text score-text">0</span> / 4</p>
+                <p>> RETAKES ARE NOT PERMITTED.</p>
+            </div>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                <a href="index.html" class="cyber-btn"
+                    style="margin-top: 0; text-decoration: none; display: flex; align-items: center; justify-content: center;">
+                    <span class="btn-text">RETURN_TO_MAIN</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="round5.js"></script>
+    <script src="anti-cheat.js"></script>
+</body>
+
+</html>

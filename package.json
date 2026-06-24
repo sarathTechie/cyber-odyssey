@@ -1,0 +1,30 @@
+{
+  "name": "ieee-project-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "round2.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faze-Mortal/cybersecurity-wie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Faze-Mortal/cybersecurity-wie/issues"
+  },
+  "homepage": "https://github.com/Faze-Mortal/cybersecurity-wie#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.108.2",
+    "connect-pg-simple": "^10.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "pg": "^8.22.0"
+  }
+}
