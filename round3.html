@@ -12,27 +12,50 @@
         .matching-board {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            gap: 1rem;
             margin-top: 1.5rem;
+        }
+
+        /* Column headers to make it obvious which side is which */
+        .matching-col-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .col-label {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--highlight);
+            letter-spacing: 2px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.4rem;
+            margin-bottom: 0.3rem;
         }
 
         .matching-col {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0.6rem;
         }
 
         .match-btn {
             background-color: var(--bg-primary);
             border: 1px solid var(--border-color);
             color: var(--text-primary);
-            padding: 1rem;
+            padding: 0.8rem 0.5rem;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s;
             font-family: 'Fira Code', monospace;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             border-radius: 4px;
+            min-height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.3;
+            width: 100%;
         }
 
         .match-btn:hover {
@@ -82,16 +105,20 @@
             }
         }
 
-        @media (max-width: 768px) {
-            .matching-board {
-                grid-template-columns: 1fr;
-            }
-        }
-
+        /* Mobile: same 2-column layout, just smaller text */
         @media (max-width: 600px) {
+            .matching-board {
+                gap: 0.5rem;
+            }
+
             .match-btn {
-                font-size: 0.8rem;
-                padding: 0.8rem 0.5rem;
+                font-size: 0.72rem;
+                padding: 0.6rem 0.3rem;
+                min-height: 50px;
+            }
+
+            .col-label {
+                font-size: 0.65rem;
             }
 
             #end-screen>div,
@@ -135,11 +162,13 @@
                 <h3 id="q-number" class="neon-text">Set 1</h3>
 
                 <div class="matching-board">
-                    <div class="matching-col" id="col-left">
-                        <!-- Left items populated by JS -->
+                    <div class="matching-col-wrapper">
+                        <div class="col-label">── CONCEPT ──</div>
+                        <div class="matching-col" id="col-left"></div>
                     </div>
-                    <div class="matching-col" id="col-right">
-                        <!-- Right items populated by JS -->
+                    <div class="matching-col-wrapper">
+                        <div class="col-label">── MATCH ──</div>
+                        <div class="matching-col" id="col-right"></div>
                     </div>
                 </div>
 
